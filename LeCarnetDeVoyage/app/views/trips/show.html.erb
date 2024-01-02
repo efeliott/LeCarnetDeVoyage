@@ -1,0 +1,15 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <%= render @trip %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mt-3">
+      <%= link_to "Modifier", edit_trip_path(@trip), class: "btn btn-primary" %>
+      <%= button_to "Supprimer", @trip, method: :delete, 
+          data: { confirm: "Are you sure?" }, 
+          class: "btn btn-danger mt-2" %>
+    </div>
+  </div>
+</div>

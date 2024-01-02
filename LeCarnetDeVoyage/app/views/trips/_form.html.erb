@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <%= form_with(model: trip, local: true) do |form| %>
+        <% if trip.errors.any? %>
+          <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading"><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h4>
+            <ul>
+              <% trip.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= form.label :destination %>
+          <%= form.text_field :destination, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :description %>
+          <%= form.text_area :description, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :dateDebut %>
+          <%= form.date_field :dateDebut, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :dateFin %>
+          <%= form.date_field :dateFin, class: 'form-control' %>
+        </div>
+
+        <div class="form-group mt-3">
+          <%= form.submit class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  destination: MyString
+  description: MyText
+  dateDebut: 2023-12-31
+  dateFin: 2023-12-31
+
+two:
+  destination: MyString
+  description: MyText
+  dateDebut: 2023-12-31
+  dateFin: 2023-12-31

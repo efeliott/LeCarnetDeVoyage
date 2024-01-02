@@ -1,0 +1,17 @@
+<div id="<%= dom_id trip %>" class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Destination: <%= trip.destination %></h5>
+    <p class="card-text">
+      <strong>Description:</strong>
+      <%= trip.description %>
+    </p>
+    <p class="card-text">
+      <strong>Du :</strong>
+      <%= trip.dateDebut.strftime("%d/%m/%Y") %>
+    </p>
+    <p class="card-text">
+      <strong>Au :</strong>
+      <%= trip.dateFin.strftime("%d/%m/%Y") %>
+    </p>
+  </div>
+</div>
